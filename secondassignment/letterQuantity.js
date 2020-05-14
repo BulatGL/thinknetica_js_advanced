@@ -1,5 +1,6 @@
 const getLetterQuantity = word => {
   const vowels = ['A', 'E', 'I', 'O', 'U'];
+  const consonants = ['B', "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "X", "Z", "W", "Y"];
   let vowelsQuantity = 0;
   let consonantsQuantity = 0;
 
@@ -8,7 +9,7 @@ const getLetterQuantity = word => {
 
     if (vowels.includes(upperLetter)) {
       vowelsQuantity++;
-    } else {
+    } else if (consonants.includes(upperLetter)) {
       consonantsQuantity++;
     }
   };

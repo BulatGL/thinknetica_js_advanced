@@ -6,5 +6,9 @@ const changeFormatOfusDate = usDate => {
     }
   };
 
+  const temp = usDateToArr[0];
+  usDateToArr[0] = usDateToArr[1];
+  usDateToArr[1] = temp;
+
   return usDateToArr.join(".");
 }

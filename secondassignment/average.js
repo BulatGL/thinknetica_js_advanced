@@ -3,7 +3,9 @@ const getAverage = (sum = 0, quantity = 0, average = 0) => {
   if (userNum === '') {
     const total = `${sum}, ${quantity}, ${average}`;
     alert(total);
+    return;
   }
+
   sum += parseInt(userNum, 10);
   quantity++;
 

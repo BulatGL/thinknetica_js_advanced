@@ -1,10 +1,23 @@
 const encode = (timestamp, claster, type, user) => {
-  const firstPart = timestamp.toString(16);
-  const secondPart = claster.toString(16);
-  const thirdPart = type.toString(16);
-  const fourthPart = user.toString(16);
+  let firstPart = timestamp.toString(16);
+  if (firstPart.length < 2) {
+    firstPart = `0${firstPart}`;
+  }
 
-  const encodedData = firstPart + secondPart + thirdPart + fourthPart;
-  console.log(encodedData);
-  return encodedData;
+  let secondPart = claster.toString(16);
+  if (secondPart.length < 2) {
+    secondPart = `0${secondPart}`;
+  }
+
+  let thirdPart = type.toString(16);
+  if (thirdPart.length < 2) {
+    thirdPart = `0${thirdPart}`;
+  }
+
+  let fourthPart = user.toString(16);
+  if (fourthPart.length < 2) {
+    fourthPart = `0${fourthPart}`;
+  }
+
+  return `${firstPart}${secondPart}${thirdPart}${fourthPart}`;
 }
